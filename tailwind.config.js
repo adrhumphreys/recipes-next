@@ -4,7 +4,17 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["IBM Plex Mono", "monospace"],
+        heading: ["Merriweather", "serif"],
+      },
+      colors: {
+        charcoal: "#424141",
+        lightgray: "#717578",
+        beige: "#FFFBF3",
+      },
+    },
   },
   plugins: [],
 };
