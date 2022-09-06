@@ -23,10 +23,14 @@ const Recipe: FC<{ recipe: RecipeData }> = ({ recipe }) => {
           ))}
         <strong>{servings} servings</strong>
       </p>
-      {ingredients &&
-        ingredients.map((ingredient, pos) => (
-          <Ingredient {...ingredient} key={pos} />
-        ))}
+      <ul>
+        {ingredients &&
+          ingredients.map((ingredient, pos) => (
+            <li key={pos}>
+              <Ingredient {...ingredient} />
+            </li>
+          ))}
+      </ul>
       {ingredientGroups &&
         ingredientGroups.map((ingredientGroup, pos) => (
           <IngredientGroup {...ingredientGroup} key={pos} />

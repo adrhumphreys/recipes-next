@@ -13,10 +13,14 @@ const IngredientGroup: FC<IngredientGroup> = ({
       <p className="ingredientGroupTitle">
         {groupTitle} {groupContext && <span>{groupContext}</span>}
       </p>
-      {ingredients &&
-        ingredients.map((ingredient, pos) => (
-          <Ingredient {...ingredient} key={pos} />
-        ))}
+      <ul>
+        {ingredients &&
+          ingredients.map((ingredient, pos) => (
+            <li key={pos}>
+              <Ingredient {...ingredient} />
+            </li>
+          ))}
+      </ul>
     </div>
   );
 };

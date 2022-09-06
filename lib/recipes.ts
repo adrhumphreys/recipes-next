@@ -25,6 +25,7 @@ export type RecipeData = {
   ingredients?: Ingredient[];
   steps: Step[];
   ingredientGroups?: IngredientGroup[];
+  slug: string;
 };
 
 export const directory = join(process.cwd(), "content/recipes");
@@ -34,7 +35,10 @@ export const getAllRecipes = (): RecipeData[] => {
   return recipes.map((fileName) => {
     const fullPath = join(directory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
-    return JSON.parse(fileContents);
+    return {
+      ...JSON.parse(fileContents),
+      slug: fileName.replace(/\.json$/, "")
+    };
   });
 };
 

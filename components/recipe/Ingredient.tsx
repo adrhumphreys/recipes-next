@@ -8,7 +8,7 @@ const Ingredient: FC<Ingredient> = ({ ingredient, context, link }) => {
     return (
       <div>
         <p>
-          <Link href={link}>{ingredient}</Link> <span>{context}</span>
+          <Link href={`/${link}`}>{ingredient}</Link> <span>{context}</span>
         </p>
       </div>
     );
