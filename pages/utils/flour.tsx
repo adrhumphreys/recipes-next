@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <h1 className="text-3xl font-bold underline">
         Sel raising flour calculator
       </h1>
-      <label for="flour">Recipe calls for:</label>
+      <label htmlFor="flour">Recipe calls for:</label>
 
       <div className="flex space-x-2">
         <div className="mt-1 flex rounded-md shadow-sm">
