@@ -9,11 +9,11 @@ const IngredientGroup: FC<IngredientGroup> = ({
   ingredients,
 }) => {
   return (
-    <div className="ingredientGroup">
-      <p className="ingredientGroupTitle">
+    <div className="space-y-2">
+      <p className="text-2xl font-bold">
         {groupTitle} {groupContext && <span>{groupContext}</span>}
       </p>
-      <ul>
+      <ul className="space-y-4">
         {ingredients &&
           ingredients.map((ingredient, pos) => (
             <li key={pos}>

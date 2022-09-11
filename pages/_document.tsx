@@ -3,14 +3,14 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html className="h-full">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Merriweather:wght@900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Merriweather:wght@900&display=swap"
             rel="stylesheet"
           />
         </Head>
-        <body className="text-charcoal bg-beige antialiased border-b-charcoal border-b-8">
+        <body className="h-full bg-beige text-charcoal antialiased">
           <Main />
           <NextScript />
         </body>

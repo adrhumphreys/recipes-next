@@ -6,20 +6,20 @@ import Link from "next/link";
 const Ingredient: FC<Ingredient> = ({ ingredient, context, link }) => {
   if (link) {
     return (
-      <div>
-        <p>
-          <Link href={`/${link}`}>{ingredient}</Link> <span>{context}</span>
-        </p>
-      </div>
+      <p className="leadin-8 text-xl">
+        <Link href={`/${link}`}>
+          <a className="font-medium underline">{ingredient}</a>
+        </Link>{" "}
+        <span className="block text-lg text-gray-500">{context}</span>
+      </p>
     );
   }
 
   return (
-    <div>
-      <p>
-        {ingredient} <span>{context}</span>
-      </p>
-    </div>
+    <p className="text-xl leading-8">
+      <span className="font-medium">{ingredient} </span>
+      <span className="block text-lg text-gray-500">{context}</span>
+    </p>
   );
 };
 

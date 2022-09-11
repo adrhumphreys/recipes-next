@@ -1,4 +1,5 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
 import { ParsedUrlQuery } from "querystring";
 import Page from "../components/layout/Page";
 import Recipe from "../components/recipe";
@@ -43,6 +44,9 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 const RecipePage: NextPage<Props> = ({ recipe, tags }) => {
   return (
     <Page tags={tags}>
+      <Head>
+        <title>{recipe.title}</title>
+      </Head>
       <Recipe recipe={recipe} />
     </Page>
   );

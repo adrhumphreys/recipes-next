@@ -4,10 +4,10 @@ import { Step } from "../../lib/recipes";
 
 const Step: FC<Step> = ({ title, step }) => {
   return (
-    <div className="">
-      {title && <h2>{title}</h2>}
-      <p>{step}</p>
-    </div>
+    <p className="text-xl leading-8">
+      {title && <span className="block font-medium">{title} </span>}
+      {step}
+    </p>
   );
 };
 
