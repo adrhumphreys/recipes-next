@@ -41,7 +41,7 @@ const Home: NextPage<Props> = ({ recipes }) => {
         defer
       ></Script>
 
-      <main className="space-y-4">
+      <div className="space-y-4">
         <div>
           <h1 className="mb-2 text-3xl font-bold underline">Recipes</h1>
           <ul>
@@ -63,7 +63,7 @@ const Home: NextPage<Props> = ({ recipes }) => {
             </li>
           </ul>
         </div>
-      </main>
+      </div>
     </Page>
   );
 };
