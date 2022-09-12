@@ -41,24 +41,28 @@ const Home: NextPage<Props> = ({ recipes }) => {
         defer
       ></Script>
 
-      <main>
-        <h1 className="text-3xl font-bold underline">Recipes</h1>
-        <ul>
-          {recipes.map(({ slug, title }) => (
-            <li key={slug}>
-              <Link href={`/${slug}`}>{title}</Link>
-            </li>
-          ))}
-        </ul>
+      <main className="space-y-4">
+        <div>
+          <h1 className="mb-2 text-3xl font-bold underline">Recipes</h1>
+          <ul>
+            {recipes.map(({ slug, title }) => (
+              <li key={slug}>
+                <Link href={`/${slug}`}>{title}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        <p>Utils</p>
-        <ul>
-          <li>
-            <Link href="/utils/flour">
-              <a>Self raising flour calculator</a>
-            </Link>
-          </li>
-        </ul>
+        <div>
+          <p className="text-lg font-bold">Utils</p>
+          <ul>
+            <li>
+              <Link href="/utils/flour">
+                <a>Self raising flour calculator</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
       </main>
     </Page>
   );
